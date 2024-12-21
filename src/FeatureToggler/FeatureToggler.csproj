@@ -6,8 +6,8 @@
     <Nullable>enable</Nullable>
 
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageId>FeatureToggler</PackageId>
-    <Version>1.0.0</Version>
+    <PackageId>muench-develops.FeatureToggler</PackageId>
+    <Version>1.0.2</Version>
     <Authors>Justin Muench</Authors>
     <Description>A lightweight library for feature flag management in .NET.</Description>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
@@ -15,6 +15,7 @@
     <PackageTags>feature-flag, toggles, dotnet</PackageTags>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -26,11 +27,4 @@
   <ItemGroup>
     <None Remove="demo/**" />
   </ItemGroup>
-
-  <ItemGroup>
-    <Content Update="**/*">
-      <Pack>false</Pack>
-    </Content>
-  </ItemGroup>
-
 </Project>

@@ -42,7 +42,7 @@ app.UseFeatureFlag("EnableNewUI",
 
 #### 2b. Use Minimal API
 ```csharp
-app.MapGet("/", (FeatureFlagManager manaer) => manager.IsEnabled("EnableNewUI")
+app.MapGet("/", (FeatureFlagManager manager) => manager.IsEnabled("EnableNewUI")
         ? Results.Ok("Welcome to the new UI!")
         : Results.Ok("Welcome to the old UI!"));
 ```
