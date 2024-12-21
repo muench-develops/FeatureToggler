@@ -3,11 +3,11 @@
 
 [![NuGet](https://img.shields.io/nuget/v/muench-develops.FeatureToggler.svg)](https://www.nuget.org/packages/muench-develops.FeatureToggler/) [![NuGet Downloads](https://img.shields.io/nuget/dt/muench-develops.FeatureToggler.svg)](https://www.nuget.org/packages/muench-develops.FeatureToggler/)
 
-`muench-develops.FeatureToggler`  is a lightweight, extensible library for managing feature flags in .NET applications. It supports multiple providers (in-memory, JSON, environment variables, databases) and integrates seamlessly with ASP.NET Core.
+`muench-develops.FeatureToggler`  is a lightweight, extensible library for managing feature flags in .NET applications. It supports multiple providers (in-memory, JSON, environment variables, configuration) and integrates seamlessly with ASP.NET Core.
 
 ## Features
 
-- **Multiple Providers**: In-Memory, JSON, Environment Variables, Database (not yet).
+- **Multiple Providers**: In-Memory, JSON, Environment Variables, Configuration.
 - **ASP.NET Core Integration**: Middleware and Dependency Injection support.
 - **Thread-Safe**: Concurrent updates handled efficiently.
 - **Testable**: Clean design for easy unit testing.
