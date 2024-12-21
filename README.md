@@ -4,7 +4,7 @@ FeatureToggler is a lightweight, extensible library for managing feature flags i
 
 ## Features
 
-- **Multiple Providers**: In-Memory, JSON, Environment Variables, Database.
+- **Multiple Providers**: In-Memory, JSON, Environment Variables, Database (not yet).
 - **ASP.NET Core Integration**: Middleware and Dependency Injection support.
 - **Thread-Safe**: Concurrent updates handled efficiently.
 - **Testable**: Clean design for easy unit testing.
@@ -64,7 +64,6 @@ if (manager.IsEnabled("EnableNewUI"))
 - In-Memory: Simple and fast for development.
 - JSON: Load feature flags from a JSON file.
 - Environment Variables: Configure flags via environment variables.
-- Database: Store and manage feature flags in a database.
 
 ## Contributing
 We welcome contributions! Please fork the repository and submit a pull request with your changes. For major updates, open an issue first to discuss your ideas.

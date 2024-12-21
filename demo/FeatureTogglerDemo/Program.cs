@@ -28,7 +28,6 @@ app.UseFeatureFlag("BetaFeature",
     onEnabled: () => Console.WriteLine("BetaFeature is enabled!"),
     onDisabled: () => Console.WriteLine("BetaFeature is disabled!"));
 
-
 // Example route for "EnableNewUI"
 app.MapGet("/", (FeatureFlagManager manager) => manager.IsEnabled("EnableNewUI")
         ? Results.Ok("Welcome to the new UI!")
