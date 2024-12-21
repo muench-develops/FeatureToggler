@@ -1,6 +1,7 @@
 using FeatureToggler;
 using FeatureToggler.Extensions;
 using FeatureToggler.Providers;
+using FeatureToggler.Utils;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
@@ -11,12 +12,7 @@ builder.Services.AddFeatureFlags(
     //     new FeatureFlag("EnableNewUI", true, "Enables the new UI"),
     //     new FeatureFlag("BetaFeature", false, "Beta feature toggle")
     // ]),
-    // new JsonFeatureFlagProvider("featureflags.json")
-    new EnvironmentVariableFeatureFlagProvider(new Dictionary<string, string>
-    {
-        { "EnableNewUI", "ENABLE_NEW_UI" },
-        { "BetaFeature", "BETA_FEATURE" }
-    })
+    new JsonFeatureFlagProvider("featureflags.json", new FileReader())
 );
 
 

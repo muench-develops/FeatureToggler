@@ -32,13 +32,19 @@ builder.Services.AddFeatureFlags(
         })
 );
 ```
-#### 2. Use Middleware
+#### 2a. Use Middleware
 Execute actions based on feature flag states:
 ```csharp
 app.UseFeatureFlag("EnableNewUI",
     onEnabled: () => Console.WriteLine("New UI is enabled!"),
     onDisabled: () => Console.WriteLine("New UI is disabled!"));
+```
 
+#### 2b. Use Minimal API
+```csharp
+app.MapGet("/", (FeatureFlagManager manaer) => manager.IsEnabled("EnableNewUI")
+        ? Results.Ok("Welcome to the new UI!")
+        : Results.Ok("Welcome to the old UI!"));
 ```
 
 #### 3. Query Flags
