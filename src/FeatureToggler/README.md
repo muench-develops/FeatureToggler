@@ -68,7 +68,37 @@ builder.Services.AddFeatureFlags(
     })
 );
 ```
+#### Configuration Provider
+The `ConfigurationFeatureFlagProvider` enables you to manage feature toggles directly from the `.NET IConfiguration` system, which can include sources like `appsettings.json`, environment variables, or other configuration providers.
 
+```json
+{
+  "FeatureToggles": {
+    "EnableNewUI": {
+      "IsEnabled": true,
+      "Description": "Enables the new UI"
+    },
+    "BetaFeature": {
+      "IsEnabled": false,
+      "Description": "This is a beta feature toggle"
+    }
+  }
+}
+
+```
+
+```csharp
+using FeatureToggler.Providers;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Register Feature Flags with the Configuration Provider
+builder.Services.AddFeatureFlags(
+    new ConfigurationFeatureFlagProvider(builder.Configuration)
+);
+
+var app = builder.Build();
+```
 
 #### 2a. Use Middleware
 Execute actions based on feature flag states:
