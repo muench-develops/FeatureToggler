@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{4A1D4A85-ED5C-484D-BA81-42F90E180002}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FeatureToggler", "src\FeatureToggler\FeatureToggler.csproj", "{4FC28818-0D8B-4EA3-8E54-FC0C729B717F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{D8996B58-4F9D-4D58-A8D3-ABA3E5AB0041}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FeatureToggler.Tests", "tests\FeatureToggler.Tests\FeatureToggler.Tests.csproj", "{3E830900-9D9C-4563-86BC-2D6DD50502D1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "demo", "demo", "{3D02FB89-DFC7-45C4-808B-F3F9317C01BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FeatureTogglerDemo", "demo\FeatureTogglerDemo\FeatureTogglerDemo.csproj", "{910669F5-4185-4B11-B99F-7594376847E5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4FC28818-0D8B-4EA3-8E54-FC0C729B717F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FC28818-0D8B-4EA3-8E54-FC0C729B717F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FC28818-0D8B-4EA3-8E54-FC0C729B717F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FC28818-0D8B-4EA3-8E54-FC0C729B717F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E830900-9D9C-4563-86BC-2D6DD50502D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E830900-9D9C-4563-86BC-2D6DD50502D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E830900-9D9C-4563-86BC-2D6DD50502D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E830900-9D9C-4563-86BC-2D6DD50502D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{910669F5-4185-4B11-B99F-7594376847E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{910669F5-4185-4B11-B99F-7594376847E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{910669F5-4185-4B11-B99F-7594376847E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{910669F5-4185-4B11-B99F-7594376847E5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4FC28818-0D8B-4EA3-8E54-FC0C729B717F} = {4A1D4A85-ED5C-484D-BA81-42F90E180002}
+		{3E830900-9D9C-4563-86BC-2D6DD50502D1} = {D8996B58-4F9D-4D58-A8D3-ABA3E5AB0041}
+		{910669F5-4185-4B11-B99F-7594376847E5} = {3D02FB89-DFC7-45C4-808B-F3F9317C01BF}
+	EndGlobalSection
+EndGlobal

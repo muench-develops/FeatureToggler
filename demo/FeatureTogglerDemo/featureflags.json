@@ -1,0 +1,17 @@
+[
+    {
+        "Key": "EnableNewUI",
+        "IsEnabled": true,
+        "Description": "Enables the new UI"
+    },
+    {
+        "Key": "BetaFeature",
+        "IsEnabled": false,
+        "Description": "Beta feature for testing"
+    },
+    {
+        "Key": "ExperimentalFeature",
+        "IsEnabled": true,
+        "Description": "A new experimental feature for limited users"
+    }
+]
