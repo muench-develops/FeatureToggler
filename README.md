@@ -18,7 +18,7 @@
 Install FeatureToggler via NuGet:
 
 ```bash
-dotnet add package FeatureToggler
+dotnet add package muench-develops.FeatureToggler
 ```
 
 ## Getting Started
