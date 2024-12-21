@@ -1,5 +1,7 @@
 # FeatureToggler
 
+[![NuGet](https://img.shields.io/nuget/v/muench-develops.FeatureToggler.svg)](https://www.nuget.org/packages/muench-develops.FeatureToggler/) [![NuGet Downloads](https://img.shields.io/nuget/dt/muench-develops.FeatureToggler.svg)](https://www.nuget.org/packages/muench-develops.FeatureToggler/)
+
 FeatureToggler is a lightweight, extensible library for managing feature flags in .NET applications. It supports multiple providers (in-memory, JSON, environment variables, databases) and integrates seamlessly with ASP.NET Core.
 
 ## Features

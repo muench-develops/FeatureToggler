@@ -19,6 +19,8 @@ dotnet add package muench-develops.FeatureToggler
 
 ## Quick Start
 ### 1. Register Feature Flags
+#### In-Memory Provider
+For quick development and testing:
 ```csharp
 builder.Services.AddFeatureFlags(
     new InMemoryFeatureFlagProvider(
@@ -29,6 +31,45 @@ builder.Services.AddFeatureFlags(
         })
 );
 ```
+#### JSON Provider
+To manage feature flags via a JSON file, use `JsonFeatureFlagProvider`:
+
+1. Create a JSON file, e.g., `featureflags.json`:
+```json
+[
+    { "Key": "EnableNewUI", "IsEnabled": true, "Description": "Enables the new UI" },
+    { "Key": "BetaFeature", "IsEnabled": false, "Description": "Beta feature toggle" }
+]
+```
+2. Register the provider in `Program.cs`:
+
+```csharp
+builder.Services.AddFeatureFlags(
+    new JsonFeatureFlagProvider("path/to/featureflags.json", new FileReader())
+);
+```
+
+#### Environment Variable Provider
+Use environment variables to control feature flags dynamically:
+
+1. Set environment variables:
+```bash
+$env:ENABLE_NEW_UI = "true"
+$env:BETA_FEATURE = "false"
+```
+2. Register the provider in Program.cs:
+
+```csharp
+builder.Services.AddFeatureFlags(
+    new EnvironmentVariableFeatureFlagProvider(new Dictionary<string, string>
+    {
+        { "EnableNewUI", "ENABLE_NEW_UI" },
+        { "BetaFeature", "BETA_FEATURE" }
+    })
+);
+```
+
+
 #### 2a. Use Middleware
 Execute actions based on feature flag states:
 ```csharp
